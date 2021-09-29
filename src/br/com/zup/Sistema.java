@@ -1,7 +1,5 @@
 package br.com.zup;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Sistema {
@@ -22,26 +20,20 @@ public class Sistema {
         String nome = capturarDados("Digite o nome do prato: ").nextLine();
         double valor = capturarDados("Digite o valor do prato: ").nextDouble();
         Prato prato = new Prato(nome,valor);
+
         return prato;
     }
     public static Ingrediente cadastrarIngredientes(){
-       String nome = capturarDados("Digite um Ingrediente: ").nextLine();
-       Ingrediente ingredientes = new Ingrediente(nome);
+        String nome = capturarDados("Digite um Ingrediente: ").nextLine();
+        Ingrediente ingredientes = new Ingrediente(nome);
 
-       return ingredientes;
-
-    }
-
-
-    public static void listandoOsIngrediente(){
-
-        int cantIngredientes = capturarDados("Digite cantidad de Ingredientes a adicionar: ").nextInt();
-
-        for (int i = 0; i < cantIngredientes; i++) {
-        cadastrarIngredientes();
-        }
+        return ingredientes;
 
     }
+
+
+
+
     public static void executar(){
 
         Cardapio cardapio = new Cardapio("Primavera");
@@ -54,7 +46,12 @@ public class Sistema {
             if (opcao ==1){
                 Prato prato = cadastrarPrato();
                 cardapio.adicionarPrato(prato);
-                prato.adicionarIngrediente(cadastrarIngredientes());
+
+                int cantIngredientes = capturarDados("Digite cantidad de Ingredientes a adicionar: ").nextInt();
+
+                for (int i = 0; i < cantIngredientes; i++) {
+                    prato.adicionarIngrediente(cadastrarIngredientes());
+                }
             }
             else if (opcao == 2){
                 System.out.println(cardapio);
