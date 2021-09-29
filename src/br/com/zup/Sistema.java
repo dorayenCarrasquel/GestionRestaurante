@@ -1,6 +1,12 @@
 package br.com.zup;
 
+import java.util.Scanner;
+
 public class Sistema {
+    private static Scanner capturarDados(String mensagem){
+        System.out.println(memsagem);
+        return new Scanner(System.in);
+    }
 
     public static void menu(){
         System.out.println("\n===================================");
@@ -11,11 +17,13 @@ public class Sistema {
         System.out.println("[3] Exibir Cardapio");
         System.out.println("[4] Sair");
     }
+    public static
     public static void executar(){
         menu();
 
 
     }
+
 
 
 
