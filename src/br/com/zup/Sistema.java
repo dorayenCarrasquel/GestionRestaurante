@@ -17,7 +17,13 @@ public class Sistema {
         System.out.println("[3] Exibir Cardapio");
         System.out.println("[4] Sair");
     }
-    public static
+    public static Ingrediente cadastrarIngredientes(){
+       String nome = capturarDados("Digite um Ingrediente").nextLine();
+       Ingrediente ingredientes = new Ingrediente(nome);
+       return ingredientes;
+
+    }
+    public static void
     public static void executar(){
         menu();
 
