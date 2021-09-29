@@ -12,7 +12,7 @@ public class Sistema {
 
     public static void menu(){
         System.out.println("\n===================================");
-        System.out.println("\n\t\tM E N U");
+        System.out.println("\n\tM E N U Desnutrido");
         System.out.println("\n===================================");
         System.out.println("[1] Cadastrar Prato");
         System.out.println("[2] Exibir Cardapio");
@@ -33,7 +33,8 @@ public class Sistema {
     }
 
 
-    public static void ListandoOsIngrediente(){
+    public static void listandoOsIngrediente(){
+
         int cantIngredientes = capturarDados("Digite cantidad de Ingredientes a adicionar: ").nextInt();
 
         for (int i = 0; i < cantIngredientes; i++) {
