@@ -16,7 +16,7 @@ public class Sistema {
         System.out.println("\n===================================");
         System.out.println("[1] Cadastrar Prato");
         System.out.println("[2] Exibir Cardapio");
-        System.out.println("[4] Sair");
+        System.out.println("[3] Sair");
     }
     public static Prato cadastrarPrato(){
         String nome = capturarDados("Digite o nome do prato: ").nextLine();
@@ -33,22 +33,22 @@ public class Sistema {
     }
 
 
-    public static Prato ListandoOsIngrediente(){
+    public static void ListandoOsIngrediente(){
         int cantIngredientes = capturarDados("Digite cantidad de Ingredientes a adicionar: ").nextInt();
 
         for (int i = 0; i < cantIngredientes; i++) {
         cadastrarIngredientes();
-        return;
         }
 
     }
     public static void executar(){
-        menu();
-        Cardapio cardapio = new Cardapio();
 
-        int opcaoMenu =true
+        Cardapio cardapio = new Cardapio("Primavera");
+
+       boolean opcaoMenu =true;
 
         while (opcaoMenu){
+            menu();
             int opcao = capturarDados("Digite uma opcão: ").nextInt();
             if (opcao ==1){
                 Prato prato = cadastrarPrato();
@@ -62,6 +62,8 @@ public class Sistema {
                 opcaoMenu=false;
                 System.out.println("Comio mucho é!!!");
             }
+            else
+                System.out.println("Marque uma opção valida...");
         }
 
 

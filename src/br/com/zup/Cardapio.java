@@ -39,8 +39,8 @@ public class Cardapio {
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("Temporada do Menú: "+temporada);
-        retorno.append("Os Pratos do día são: "+pratoDoDia);
+        retorno.append("\nTemporada do Menú: \t"+temporada);
+        retorno.append("\nOs Pratos do día são: \t"+pratoDoDia);
         return retorno.toString();
     }
 }
